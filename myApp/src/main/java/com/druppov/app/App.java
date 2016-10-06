@@ -1,13 +1,24 @@
 package com.druppov.app;
 
 /**
- * Hello world!
+ * Print command args!
  *
  */
 public class App 
 {
+    public void printFromCommandsArgs(String[] args) {
+		if(args.length == 0) {
+			System.out.println("No attributes!");
+		} else {
+			for(String arg : args) {
+			  System.out.println(arg);
+			}
+		}
+    }
+
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+		App app = new App();
+		app.printFromCommandsArgs(args);
     }
 }
